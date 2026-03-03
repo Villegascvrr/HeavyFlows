@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heavy Flow — The Operating Layer for Industrial Commerce</title>
+  <meta name="description"
+    content="Heavy Flow orchestrates complex B2B sales across pricing, customers, stock and execution — integrating existing systems into structured commercial infrastructure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-mark">HF</span>
+        <span class="logo-text">Heavy Flow</span>
+      </a>
+      <div class="nav-links">
+        <a href="#problem">Architecture</a>
+        <a href="#orchestration">Orchestration</a>
+        <a href="#control">Infrastructure</a>
+        <a href="#cta-final" class="nav-cta">Request Access</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ① HERO -->
+  <section class="hero" id="hero">
+    <div class="grid-bg" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <h1 class="hero-headline">
+        The Operating Layer<br />for Industrial <span class="accent-text">Commerce.</span>
+      </h1>
+
+      <p class="hero-sub">
+        Heavy Flow orchestrates complex B2B sales across pricing, customers and execution — integrating existing systems
+        into structured commercial infrastructure.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#cta-final" class="btn btn-outline" id="hero-cta-primary">Request Strategic Access</a>
+      </div>
+
+      <div class="hero-anchor-line" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ② STRUCTURAL PROBLEM -->
+  <section class="section" id="problem">
+    <div class="container">
+      <div class="section-label">01 — Structural Gap</div>
+
+      <h2 class="section-title">Industrial Sales Were Digitized.<br />They Were Never Structured.</h2>
+
+      <div class="problem-stack">
+        <div class="problem-row reveal">
+          <span class="pr-system">ERP</span>
+          <span class="pr-sep">—</span>
+          <span class="pr-desc">Manages transactions and financial records. Operates at the ledger layer. Commercial
+            logic sits above it, unstructured.</span>
+        </div>
+        <div class="problem-row reveal">
+          <span class="pr-system">CRM</span>
+          <span class="pr-sep">—</span>
+          <span class="pr-desc">Tracks interactions and pipeline stages. Records the conversation. Does not execute the
+            commercial logic behind it.</span>
+        </div>
+        <div class="problem-row reveal">
+          <span class="pr-system">Spreadsheets</span>
+          <span class="pr-sep">—</span>
+          <span class="pr-desc">Control pricing logic and commercial conditions. A living system. Outside every other
+            system. Owned by individuals, not by the organization.</span>
+        </div>
+        <div class="problem-row reveal">
+          <span class="pr-system">Email</span>
+          <span class="pr-sep">—</span>
+          <span class="pr-desc">Coordinates execution and approvals across teams. A routing layer for decisions that
+            have no formal system to hold them.</span>
+        </div>
+      </div>
+
+      <div class="problem-conclusion reveal">
+        <p class="conclusion-lead">Commercial logic remains fragmented — distributed across systems that were never
+          designed to communicate.</p>
+        <p class="conclusion-statement">This is not a tooling problem.<br /><strong>It is an architectural gap.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ ORCHESTRATION LAYER -->
+  <section class="section" id="orchestration">
+    <div class="container">
+      <div class="section-label">02 — Architecture</div>
+      <h2 class="section-title">A New Layer Above the Tools.</h2>
+
+      <div class="orch-layout">
+        <div class="orch-text">
+          <p class="body-lg reveal">
+            Heavy Flow does not replace ERP or CRM. It introduces a structured orchestration layer that connects and
+            automates commercial logic across systems — operating above them, not within them.
+          </p>
+          <p class="body-md reveal">
+            The orchestration layer holds commercial intelligence: pricing rules, customer-specific conditions, stock
+            awareness, and execution logic. Systems remain in place. The flow between them becomes controlled.
+          </p>
+          <blockquote class="orch-quote reveal">
+            We don't add another tool.<br />
+            We structure the flow between them.
+          </blockquote>
+        </div>
+
+        <!-- Blueprint diagram — no boxes, thin lines -->
+        <div class="sys-diagram reveal" aria-label="Orchestration system diagram">
+          <div class="sd-row sd-top">
+            <span class="sd-node">ERP</span>
+            <span class="sd-node">CRM</span>
+            <span class="sd-node">WMS</span>
+          </div>
+          <div class="sd-lines" aria-hidden="true">
+            <svg viewBox="0 0 300 50" xmlns="http://www.w3.org/2000/svg">
+              <line x1="50" y1="0" x2="50" y2="25" />
+              <line x1="150" y1="0" x2="150" y2="25" />
+              <line x1="250" y1="0" x2="250" y2="25" />
+              <line x1="50" y1="25" x2="250" y2="25" />
+              <line x1="150" y1="25" x2="150" y2="50" />
+            </svg>
+          </div>
+          <div class="sd-core">
+            <span class="sd-core-label">HEAVY FLOW</span>
+          </div>
+          <div class="sd-lines" aria-hidden="true">
+            <svg viewBox="0 0 300 50" xmlns="http://www.w3.org/2000/svg">
+              <line x1="150" y1="0" x2="150" y2="25" />
+              <line x1="50" y1="25" x2="250" y2="25" />
+              <line x1="50" y1="25" x2="50" y2="50" />
+              <line x1="150" y1="25" x2="150" y2="50" />
+              <line x1="250" y1="25" x2="250" y2="50" />
+            </svg>
+          </div>
+          <div class="sd-row sd-bottom">
+            <span class="sd-node sd-node-muted">Pricing</span>
+            <span class="sd-node sd-node-muted">Orders</span>
+            <span class="sd-node sd-node-muted">Execution</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ STRUCTURED COMMERCIAL CONTROL -->
+  <section class="section section-control" id="control">
+    <div class="container control-layout">
+
+      <!-- Left Column: Conceptual Statement -->
+      <div class="control-header reveal">
+        <div class="section-label">03 — Infrastructure Modules</div>
+        <h2 class="section-title">Structured Commercial Control</h2>
+        <p class="eyebrow-statement">
+          Industrial commerce runs on logic.<br />
+          <strong>Most companies still run it on memory.</strong>
+        </p>
+      </div>
+
+      <!-- Right Column: System Modules -->
+      <div class="control-modules">
+
+        <div class="c-module reveal">
+          <div class="c-num">01</div>
+          <div class="c-body">
+            <h3 class="c-title">Pricing Intelligence Layer</h3>
+            <p class="c-desc">Formalizes dynamic pricing across segments and tiers. Encodes logic to remove dependency
+              on institutional memory.</p>
+          </div>
+        </div>
+        <div class="c-divider" aria-hidden="true"></div>
+
+        <div class="c-module reveal">
+          <div class="c-num">02</div>
+          <div class="c-body">
+            <h3 class="c-title">Commercial Architecture</h3>
+            <p class="c-desc">Structures unique conditions per customer at the system level. Owned by the organization,
+              not individual reps.</p>
+          </div>
+        </div>
+        <div class="c-divider" aria-hidden="true"></div>
+
+        <div class="c-module reveal">
+          <div class="c-num">03</div>
+          <div class="c-body">
+            <h3 class="c-title">Order Orchestration</h3>
+            <p class="c-desc">Integrates real-time stock into response logic. Orders execute with full commercial
+              context, without manual approximation.</p>
+          </div>
+        </div>
+        <div class="c-divider" aria-hidden="true"></div>
+
+        <div class="c-module reveal">
+          <div class="c-num">04</div>
+          <div class="c-body">
+            <h3 class="c-title">Automated Execution</h3>
+            <p class="c-desc">Replaces ad-hoc coordination with defined, systemic execution paths. Cycle times are
+              reduced and scaling is repeatable.</p>
+          </div>
+        </div>
+        <div class="c-divider" aria-hidden="true"></div>
+
+        <div class="c-module reveal">
+          <div class="c-num">05</div>
+          <div class="c-body">
+            <h3 class="c-title">Margin Visibility</h3>
+            <p class="c-desc">Surfaces operational margin clarity across complex, cross-entity flows. What cannot be
+              systemically measured cannot be managed.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ BUILT FOR COMPLEXITY -->
+  <section class="section section-complexity" id="complexity">
+    <div class="container">
+
+      <!-- Top Declaration -->
+      <div class="complexity-declaration reveal">
+        <div class="section-label">04 — Deployment Context</div>
+        <h2 class="section-title">Designed for High-Complexity<br />Industrial Environments.</h2>
+        <p class="complexity-statement">
+          Built for environments where commercial scale demands structural engineering — not point solutions.
+        </p>
+      </div>
+
+      <!-- Structural Reference Line -->
+      <div class="complexity-divider reveal" aria-hidden="true"></div>
+
+      <!-- Asymmetrical Comparison -->
+      <div class="scope-layout">
+        <div class="scope-col scope-col-heavy reveal">
+          <div class="scope-header">Built for</div>
+          <ul class="scope-list scope-list-primary">
+            <li><span class="scope-dash">—</span> Multi-company industrial groups with cross-entity commercial flows
+            </li>
+            <li><span class="scope-dash">—</span> High transaction volumes requiring automated orchestration</li>
+            <li><span class="scope-dash">—</span> Complex, customer-specific pricing and contractual structures</li>
+            <li><span class="scope-dash">—</span> Structured B2B environments: industrial distribution, manufacturing,
+              supply</li>
+          </ul>
+        </div>
+
+        <div class="scope-col scope-col-light reveal">
+          <div class="scope-header scope-header-not">Not built for</div>
+          <ul class="scope-list scope-list-not">
+            <li><span class="scope-dash">—</span> Small catalogs or low-complexity commercial environments</li>
+            <li><span class="scope-dash">—</span> Generic e-commerce or consumer-facing retail operations</li>
+            <li><span class="scope-dash">—</span> Feature-shopping buyers — this is a structural deployment, not a tool
+              evaluation</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ⑥ DEPLOYMENT CONTEXT -->
+  <section class="section section-deployment" id="validation">
+    <div class="container relative-container">
+      <div class="section-label">05 — Deployment Context</div>
+
+      <h2 class="deployment-title">Operating in a Real Industrial Environment.</h2>
+
+      <div class="deployment-body">
+        <p class="deployment-lead">
+          Heavy Flow is currently deployed within a multi-entity industrial group operating under:
+        </p>
+
+        <ul class="deployment-list">
+          <li><span class="d-dash">—</span> Complex, dynamic pricing structures</li>
+          <li><span class="d-dash">—</span> Cross-entity commercial flows</li>
+          <li><span class="d-dash">—</span> High transaction volumes</li>
+          <li><span class="d-dash">—</span> Customer-specific contractual conditions</li>
+        </ul>
+
+        <p class="deployment-closing">
+          This is production infrastructure — not a controlled pilot.
+        </p>
+        <p class="deployment-reinforcing">
+          Validated under real commercial pressure.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ⑦ ECONOMIC IMPACT -->
+  <section class="section section-impact" id="impact">
+    <div class="container impact-container">
+      <div class="section-label">06 — Financial Architecture</div>
+
+      <div class="impact-header reveal">
+        <h2 class="impact-title">
+          <span class="impact-title-light">Small Structural Gains.</span><br />
+          <span class="impact-title-heavy">Large Financial Impact.</span>
+        </h2>
+      </div>
+
+      <!-- Animated Architectural Equation Band -->
+      <div class="impact-equation-band reveal">
+        <div class="equation-inner">
+          <span class="equation-trigger">AT SCALE</span>
+          <span class="equation-arrow">→</span>
+          <span class="equation-result">2% BECOMES SYSTEMIC</span>
+        </div>
+      </div>
+
+      <div class="impact-summary reveal">
+        <p>In high-volume industrial environments, 2% operational efficiency translates directly into margin expansion.
+          Orchestrating commercial flows creates <span class="focus-phrase">system-level compounding</span> across every
+          transaction — turning structure
+          into <span class="focus-phrase">financial leverage</span>.</p>
+
+        <!-- Structural subdivision line -->
+        <div class="impact-sys-line">
+          <div class="sys-line-draw"></div>
+          <div class="sys-line-cut"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Massive Bottom Line -->
+    <div class="impact-bottom-line reveal" aria-hidden="true"></div>
+  </section>
+
+  <!-- ⑧ LONG-TERM VISION -->
+  <section class="section" id="vision">
+    <div class="container">
+      <div class="section-label">07 — Long-Term Architecture</div>
+      <h2 class="section-title reveal">From Sales Execution<br />to Commercial Systems.</h2>
+
+      <div class="vision-body">
+        <p class="body-lg reveal">The industrial sector has digitized its operations. ERPs run transactions. CRMs log
+          interactions. Yet the commercial logic that drives the business — the rules, the relationships, the margin
+          decisions — remains unstructured.</p>
+        <p class="body-md reveal">Heavy Flow is building the digital backbone for industrial B2B commerce: a durable,
+          structured orchestration layer that holds commercial intelligence at the infrastructure level.</p>
+        <p class="body-md reveal">The goal is not to add software to a stack. It is to give industrial companies a
+          commercial system — one that operates with the same structural rigor as the ERP systems they rely on for
+          financial control.</p>
+      </div>
+
+      <div class="vision-pillars">
+        <div class="vp-item reveal">
+          <span class="vp-num">I</span>
+          <span class="vp-text">Structured commercial infrastructure — encoded, not informal</span>
+        </div>
+        <div class="vp-item reveal">
+          <span class="vp-num">II</span>
+          <span class="vp-text">System-level pricing and execution logic — owned by the organization</span>
+        </div>
+        <div class="vp-item reveal">
+          <span class="vp-num">III</span>
+          <span class="vp-text">A durable orchestration layer that scales with industrial complexity</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑨ FINAL CTA -->
+  <section class="section section-cta" id="cta-final">
+    <div class="grid-bg grid-bg-cta" aria-hidden="true"></div>
+    <div class="container cta-inner">
+      <div class="cta-eyebrow reveal">Infrastructure. Not a product launch.</div>
+      <h2 class="cta-headline reveal">Build Commercial Infrastructure<br />That Scales.</h2>
+      <p class="cta-sub reveal">
+        Heavy Flow is deployed selectively in high-complexity industrial environments.<br />
+        Strategic access is by request.
+      </p>
+      <div class="cta-action reveal">
+        <a href="mailto:access@heavyflow.io" class="btn btn-outline btn-cta" id="cta-request">Request Strategic
+          Access</a>
+      </div>
+      <p class="cta-note reveal">For multi-company industrial groups and high-volume B2B distributors.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-mark">HF</span>
+        <span class="logo-text">Heavy Flow</span>
+      </div>
+      <p class="footer-tag">The Operating Layer for Industrial Commerce.</p>
+      <p class="footer-copy">© 2026 Heavy Flow. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
