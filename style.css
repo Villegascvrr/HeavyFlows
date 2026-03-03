@@ -1,5 +1,5 @@
 /* =========================================================
-   HEAVY FLOW — INFRASTRUCTURE-FIRST REDESIGN
+   HEAVYFLOWS — INFRASTRUCTURE-FIRST REDESIGN
    Typography-led. No SaaS cards. No rounded UI.
    ========================================================= */
 
@@ -11,7 +11,7 @@
   --text-primary: #edf0f5;
   --text-secondary: #7d8899;
   --text-muted: #3f4a57;
-  --text-accent: #4175a6;
+  --text-accent: #4672f5;
 
   --blue: #4a8fd4;
   --blue-dim: rgba(74, 143, 212, 0.08);
@@ -158,18 +158,12 @@ strong {
   opacity: 1;
 }
 
-.nav-cta {
-  font-family: var(--font-mono);
-  font-weight: 500;
+.btn-nav {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.72rem;
   letter-spacing: 0.08em;
-  color: var(--text-primary) !important;
-  border: 1px solid var(--line);
-  padding: 0.45rem 1.1rem;
-  transition: border-color 0.2s;
-}
-
-.nav-cta:hover {
-  border-color: rgba(255, 255, 255, 0.25);
+  border-width: 1px;
+  /* Thinner border for navbar balance, matches intent without heavy 2px */
 }
 
 /* ── BUTTONS ──────────────────────────────────────────── */
@@ -250,6 +244,9 @@ strong {
 
 .accent-text {
   color: var(--text-accent);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-shadow: 0 0 18px rgba(79, 124, 255, 0.12);
 }
 
 .hero-anchor-line {
@@ -507,12 +504,14 @@ strong {
 
 /* ── COMMERCIAL CONTROL ───────────────────────────────── */
 .section-control {
-  background: #0c1015;
+  background: #0c1015 !important;
   /* Lighter industrial background for weight */
   border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 12rem 0;
-  margin: var(--section-gap) 0;
+  border-bottom: none !important;
+  padding-top: 12rem;
+  padding-bottom: 6rem;
+  margin-top: var(--section-gap);
+  margin-bottom: 0 !important;
 }
 
 .control-layout {
@@ -599,8 +598,14 @@ strong {
 
 /* ── COMPLEXITY POSITIONING ───────────────────────────── */
 .section-complexity {
-  background: var(--bg-alt);
-  /* #0b0f13, slightly different from previous to break rhythm */
+  background: #0c1015 !important;
+  /* Match section-control for continuous visual flow */
+  border-top: none !important;
+  border-bottom: 1px solid var(--line);
+  padding-top: 6rem;
+  padding-bottom: 12rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
   position: relative;
 }
 
@@ -718,7 +723,8 @@ strong {
   background: #06080b;
   /* Solid serious background, no grid */
   padding: 12rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: none !important;
+  margin-top: 0 !important;
   /* clean separation, not dramatic */
 }
 
@@ -794,204 +800,198 @@ strong {
   /* Solid dark background, no grid, no texture */
   position: relative;
   overflow: hidden;
-  padding: 10rem 0 0 0;
-  /* Accommodate massive bottom line */
+  padding: 12rem 0;
+  text-align: center;
 }
 
-.impact-header {
-  margin-bottom: 7rem;
-  text-align: left;
+.section-impact .section-label {
+  margin-bottom: 8rem;
 }
 
-.impact-title {
+/* 1. Opening statement */
+.impact-opening {
+  margin-bottom: 8rem;
+  /* Large spacing */
+}
+
+.opening-statement {
   font-family: var(--font-sans);
-  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
   line-height: 1.25;
-}
-
-.impact-title-light {
-  font-weight: 300;
-  color: var(--text-secondary);
   letter-spacing: -0.02em;
-  display: block;
-  margin-bottom: 2rem;
-  /* Increased spacing between both lines */
 }
 
-.impact-title-heavy {
-  font-weight: 600;
-  color: var(--text-primary);
-  letter-spacing: -0.01em;
-  display: block;
-}
-
-/* Animated Architectural Equation Band */
-.impact-equation-band {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  background: #0d1116;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 3.5rem 0;
-  margin-bottom: 6rem;
-  display: flex;
-  justify-content: center;
-}
-
-/* Override reveal for the band to use clip-path left-to-right */
-.impact-equation-band.reveal {
-  opacity: 1;
-  transform: none;
-  clip-path: inset(0 100% 0 0);
-  /* Hidden via left-to-right mask */
-  transition: clip-path 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
-}
-
-.impact-equation-band.reveal.visible {
-  clip-path: inset(0 0 0 0);
-}
-
-.equation-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
-  font-family: var(--font-mono);
-  font-size: 1.15rem;
-  letter-spacing: 0.12em;
-}
-
-.equation-trigger {
-  color: var(--text-secondary);
-  font-weight: 400;
-}
-
-.equation-arrow {
-  color: var(--blue);
-  font-size: 1.4rem;
+.os-light {
   font-weight: 300;
-}
-
-.equation-result {
-  color: var(--text-primary);
-  font-weight: 500;
-  letter-spacing: 0.15em;
-}
-
-/* Sharper, tighter paragraph with animations */
-.impact-summary {
-  max-width: 680px;
-  background: transparent;
-  padding-bottom: 8rem;
-  position: relative;
-}
-
-.impact-summary p {
-  font-size: 1.2rem;
-  line-height: 1.6;
   color: var(--text-secondary);
+}
+
+.os-heavy {
+  font-weight: 500;
+  color: var(--text-primary);
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* 2. Consequence statement */
+.impact-consequence {
+  margin-bottom: 6rem;
+}
+
+.consequence-statement {
+  font-family: var(--font-sans);
+  font-size: clamp(1.2rem, 2.2vw, 1.4rem);
   font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.45;
   letter-spacing: 0;
 }
 
-/* Focus Phrase (Key phrase opacity shift) */
-.focus-phrase {
-  color: var(--text-primary);
-  opacity: 0.35;
-  transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s;
+/* 3. Visual compounding element */
+.impact-compounding {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7rem;
 }
 
-.impact-summary.visible .focus-phrase {
-  opacity: 1;
-}
-
-/* Subdivision structural line */
-.impact-sys-line {
-  position: absolute;
-  bottom: 5rem;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  overflow: hidden;
-}
-
-.sys-line-draw {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.35);
-  transform: translateX(-100%);
-  transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.8s;
-}
-
-.impact-summary.visible .sys-line-draw {
-  transform: translateX(0);
-}
-
-.sys-line-cut {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: repeating-linear-gradient(90deg, transparent 0, transparent 6px, #080a0d 6px, #080a0d 12px);
-  opacity: 0;
-  transition: opacity 1.2s ease 2.1s;
-  /* Subdivides after line is drawn */
-}
-
-.impact-summary.visible .sys-line-cut {
-  opacity: 1;
-}
-
-/* Massive Bottom Line */
-.impact-bottom-line {
-  width: 100%;
-  height: 6px;
-  /* Strong horizontal divider */
-  background: var(--text-primary);
-}
-
-/* ── VISION ───────────────────────────────────────────── */
-.vision-body {
-  max-width: 680px;
-  margin-bottom: 3.5rem;
-}
-
-.vision-body .body-lg,
-.vision-body .body-md {
-  max-width: none;
-}
-
-.vision-pillars {
+.compounding-column {
   display: flex;
   flex-direction: column;
-  gap: 0;
-  border-top: 1px solid var(--line);
-  max-width: 640px;
+  align-items: center;
+  gap: 0.2rem;
 }
 
-.vp-item {
-  display: flex;
-  gap: 1.8rem;
-  align-items: baseline;
-  padding: 1.2rem 0;
-  border-bottom: 1px solid var(--line);
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
-}
-
-.vp-num {
+.comp-item {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 400;
   letter-spacing: 0.1em;
   color: var(--blue);
-  flex-shrink: 0;
-  width: 16px;
+  /* Default reveal state handles opacity=0 and translate */
+}
+
+.comp-item.reveal.visible:nth-child(1) {
+  opacity: 0.15;
+  transform: translateY(0) scale(0.9);
+}
+
+.comp-item.reveal.visible:nth-child(2) {
+  opacity: 0.25;
+  transform: translateY(0) scale(0.92);
+}
+
+.comp-item.reveal.visible:nth-child(3) {
+  opacity: 0.35;
+  transform: translateY(0) scale(0.94);
+}
+
+.comp-item.reveal.visible:nth-child(4) {
+  opacity: 0.45;
+  transform: translateY(0) scale(0.96);
+}
+
+.comp-item.reveal.visible:nth-child(5) {
+  opacity: 0.60;
+  transform: translateY(0) scale(0.98);
+}
+
+.comp-item.reveal.visible:nth-child(6) {
+  opacity: 0.75;
+  transform: translateY(0) scale(1);
+}
+
+.comp-item.reveal.visible:nth-child(7) {
+  opacity: 0.90;
+  transform: translateY(0) scale(1.02);
+}
+
+.comp-item.reveal.visible:nth-child(8) {
+  opacity: 1;
+  transform: translateY(0) scale(1.05);
+  font-weight: 500;
+}
+
+/* 4. Closing synthesis */
+.impact-closing {
+  margin-top: 2rem;
+}
+
+.closing-statement {
+  font-family: var(--font-sans);
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+/* ── LONG-TERM ARCHITECTURE (THESIS) ──────────────────── */
+.section-thesis {
+  background: var(--bg);
+  padding: 10rem 0;
+  border-top: none;
+  position: relative;
+}
+
+.thesis-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.thesis-container .section-label {
+  margin-bottom: 4rem;
+}
+
+.thesis-title {
+  font-family: var(--font-sans);
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 3rem;
+}
+
+.thesis-sub {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 6rem;
+}
+
+.thesis-principles {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  margin-bottom: 8rem;
+}
+
+.thesis-principles li {
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+  line-height: 1.4;
+}
+
+.t-bullet {
+  color: var(--blue);
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.thesis-closing {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--text-accent);
+  letter-spacing: -0.01em;
+  padding-top: 4rem;
+  border-top: 1px solid var(--line);
 }
 
 /* ── FINAL CTA ────────────────────────────────────────── */
@@ -1176,5 +1176,174 @@ strong {
 
   .pr-sep {
     display: none;
+  }
+}
+
+/* ── MODAL (DEPLOYMENT REVIEW) ────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 5, 7, 0.9);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-container {
+  background: #0b0f13;
+  border: 1px solid var(--line);
+  width: 100%;
+  max-width: 600px;
+  padding: 3.5rem;
+  position: relative;
+  /* Minimal transform just to avoid feeling "slammed" onto screen */
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-container {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.5rem;
+  transition: color 0.15s;
+}
+
+.modal-close:hover {
+  color: var(--text-primary);
+}
+
+.modal-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-family: var(--font-sans);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+}
+
+.deployment-form input,
+.deployment-form select,
+.deployment-form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0;
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+}
+
+/* Custom dropdown arrow using inline encoded minimal SVG */
+.deployment-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%237d8899%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.2rem top 50%;
+  background-size: 0.65rem auto;
+}
+
+.deployment-form option {
+  background-color: #0b0f13;
+  color: var(--text-primary);
+}
+
+.deployment-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.deployment-form input:focus,
+.deployment-form select:focus,
+.deployment-form textarea:focus {
+  border-color: var(--line-accent);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.form-actions {
+  margin-top: 3rem;
+  border-top: 1px solid var(--line);
+  padding-top: 2rem;
+}
+
+.form-actions .btn-submit {
+  width: 100%;
+}
+
+.modal-success {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.success-msg {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+@media (max-width: 650px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .modal-container {
+    padding: 2.5rem;
+    margin: 1.5rem;
+    max-height: 90vh;
+    overflow-y: auto;
   }
 }
