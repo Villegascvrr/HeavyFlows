@@ -213,12 +213,12 @@ strong {
 /* ── HERO ─────────────────────────────────────────────── */
 .hero {
   position: relative;
-  min-height: 90vh;
+  min-height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 14rem 2.5rem 6.5rem;
+  padding: 10rem 2.5rem 8rem;
   overflow: hidden;
 }
 
@@ -730,7 +730,7 @@ strong {
 
 .deployment-title {
   font-family: var(--font-sans);
-  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
   font-weight: 500;
   color: var(--text-primary);
   line-height: 1.25;
@@ -745,7 +745,7 @@ strong {
 }
 
 .deployment-lead {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   line-height: 1.6;
   color: var(--text-secondary);
   font-weight: 400;
@@ -762,7 +762,7 @@ strong {
 }
 
 .deployment-list li {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
   display: flex;
   align-items: flex-start;
@@ -777,7 +777,7 @@ strong {
 }
 
 .deployment-closing {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: var(--text-primary);
   line-height: 1.4;
@@ -944,7 +944,7 @@ strong {
 
 .thesis-title {
   font-family: var(--font-sans);
-  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
   font-weight: 500;
   color: var(--text-primary);
   line-height: 1.15;
@@ -953,7 +953,7 @@ strong {
 }
 
 .thesis-sub {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
   color: var(--text-secondary);
   line-height: 1.5;
@@ -969,7 +969,7 @@ strong {
 }
 
 .thesis-principles li {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 400;
   color: var(--text-primary);
   display: flex;
@@ -981,12 +981,12 @@ strong {
 .t-bullet {
   color: var(--blue);
   font-family: var(--font-mono);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   opacity: 0.8;
 }
 
 .thesis-closing {
-  font-size: 1.7rem;
+  font-size: 1.35rem;
   font-weight: 600;
   color: var(--text-accent);
   letter-spacing: -0.01em;
